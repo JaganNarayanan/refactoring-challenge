@@ -24,3 +24,17 @@ if ( username.length > 3 && username.length <= 10 ) || ( username.downcase.start
 else
 	puts "Thanks for joining!"
 end
+# _______________________________________________________
+# Refactored code
+
+def check (username, amount)
+	if ( username.length > 3 && username.length <= 10 ) || ( username.downcase.start_with?("q", "u", "x", "y", "z") )
+		puts "Congratulations #{username}! You won #{amount} dollars!"
+	else
+		puts "Thanks for joining!"
+	end
+end
+
+check("Alice", "10")
+check("Bobby", "50")
+check("Xena", "100")
